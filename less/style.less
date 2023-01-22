@@ -1,0 +1,113 @@
+// out: ../css/sryle.css
+@keyframes load-spin-v1{
+    0%{
+        height: 50px;
+    }
+    50% {
+        height: 180px;
+    }
+    100% {
+        height: 50px;
+    }
+}
+@keyframes load-spin-v2{
+    33%{
+        background-color: #fff;
+    }
+    66% {
+        background-color: rgb(243, 86, 86);
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+.spiner-v1{
+    margin: 20px;
+    width: 100% ;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .element{
+        animation-name: load-spin-v1;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+        width: 20px;
+        height: 50px;
+        margin-right: 20px;
+        border-radius: 10px ;
+        background-color: rgb(83, 114, 212);
+    }
+    .element:nth-child(2){
+        animation-delay:250ms;
+        }
+    .element:nth-child(3){
+        animation-delay:500ms;
+        }
+    .element:nth-child(4){
+        animation-delay:750ms;
+        }
+    .element:nth-child(5){
+        animation-delay:1000ms;
+        }
+}
+.spiner-v2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .round{
+        animation-name: load-spin-v2;
+        animation-duration: 1.5s;
+        animation-iteration-count:infinite;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        //background-color: #f00;
+        margin: 15px;
+    }
+    .round:nth-child(2){
+        animation-delay: 400ms;
+    }
+    .round:nth-child(3){
+        animation-delay:800ms;
+    }
+}
+input[type=range]{
+    appearance: none;
+    background: #bbb;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 10px;
+    height: 16px;
+    background-color: rgb(162, 248, 145);
+    border: none;
+    border-radius:8px;
+}
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    border: none;
+    height: 16px;
+    width: 32px;
+    border-radius: 8px;
+    background: rgb(69, 122, 182);
+    
+}
+input[type=range]:focus{
+    outline: none;
+    box-shadow: 5px 5px 14px 0px rgba(65, 114, 36, 0.2);
+    }
+label{
+    color: #888;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
