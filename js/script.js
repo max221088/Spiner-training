@@ -9,7 +9,7 @@ function spin1() {
 	hightEl2 = [];
 	for (let i = 0; i < $spinV1.length; i++) {
 		let dal = 250 * i;
-		hightEl = Math.sin((((curentTime - startTime + dal) / 1000) * 2) % 90);
+		hightEl = Math.sin((((curentTime - startTime - dal) / 1000) * 2) % 90);
 		hightEl = Math.abs(hightEl) * 100 + 50;
 		hightEl2.push(hightEl);
 		//console.log(hightEl2);
